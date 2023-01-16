@@ -1,0 +1,14 @@
+import smtplib
+
+# Define the email server and credentials
+server = smtplib.SMTP('smtp.example.com')
+server.login("username", "password")
+
+# Define the email message
+msg = "Hello,\nThis is a test email."
+
+# Send the email
+server.sendmail("sender@example.com", "recipient@example.com", msg)
+
+# Close the email server
+server.quit()
